@@ -1,0 +1,21 @@
+﻿<Window x:Class="PassGen.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PassGen" Height="308" Width="368" Background="#FF202020" Foreground="White" ResizeMode="CanMinimize" Icon="passgen.ico">
+    <Grid>
+        <Label Content="Generated Password" HorizontalAlignment="Left" Margin="10,172,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <TextBox x:Name="LengthField" HorizontalAlignment="Left" Height="22" Margin="10,36,0,0" TextWrapping="Wrap" Text="12" VerticalAlignment="Top" Width="119" Foreground="White" Background="#FF323232" BorderBrush="#FF5E5E5E" VerticalContentAlignment="Center" Style="{DynamicResource DefaultTextBoxStyle}" TextChanged="LengthField_TextChanged"/>
+        <Label Content="Password Length" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox x:Name="UppercaseField" Content="Uppercase Letters" HorizontalAlignment="Left" Margin="10,94,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232" BorderBrush="#FF5E5E5E" IsChecked="True" Style="{DynamicResource DefaultCheckBoxStyle}" Checked="UppercaseField_Checked" Unchecked="UppercaseField_Unchecked"/>
+        <Label Content="Password Characters" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Foreground="White"/>
+        <CheckBox x:Name="LowercaseField" Content="Lowercase Letters" HorizontalAlignment="Left" Margin="10,120,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232" BorderBrush="#FF5E5E5E" IsChecked="True" Style="{DynamicResource DefaultCheckBoxStyle}" Checked="LowercaseField_Checked" Unchecked="LowercaseField_Unchecked"/>
+        <CheckBox x:Name="NumberField" Content="Numbers" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232" BorderBrush="#FF5E5E5E" Style="{DynamicResource DefaultCheckBoxStyle}" IsChecked="True" Checked="NumberField_Checked" Unchecked="NumberField_Unchecked"/>
+        <CheckBox x:Name="SpecialField" Content="Special Characters" HorizontalAlignment="Left" Margin="200,94,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232" BorderBrush="#FF5E5E5E" Style="{DynamicResource DefaultCheckBoxStyle}" Checked="SpecialField_Checked" Unchecked="SpecialField_Unchecked"/>
+        <CheckBox x:Name="WhitespaceField" Content="Whitespace" HorizontalAlignment="Left" Margin="200,120,0,0" VerticalAlignment="Top" Foreground="White" Background="#FF323232" BorderBrush="#FF5E5E5E" Style="{DynamicResource DefaultCheckBoxStyle}" Checked="WhitespaceField_Checked" Unchecked="WhitespaceField_Unchecked"/>
+        <TextBox x:Name="PasswordField" Height="22" Margin="10,203,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" Background="#FF323232" BorderBrush="#FF5E5E5E" VerticalContentAlignment="Center" ToolTip="Your generated password goes here." IsReadOnly="True" Style="{DynamicResource DefaultTextBoxStyle}"/>
+        <Button x:Name="GenerateButton" Content="Generate" HorizontalAlignment="Right" Margin="0,0,10,11" Width="86" Background="#FF323232" BorderBrush="#FF5E5E5E" Foreground="White" Height="26" VerticalAlignment="Bottom" Style="{DynamicResource DefaultButtonStyle}" Click="GenerateButton_Click"/>
+        <Label x:Name="CharacterWarning" Content="Enable more characters" Margin="195,140,0,0" VerticalAlignment="Top" Foreground="#00FF0000" HorizontalAlignment="Left"/>
+        <Label x:Name="LengthWarning" Content="Invalid password length" Margin="134,33,0,0" VerticalAlignment="Top" Foreground="#00FF0000" HorizontalAlignment="Left"/>
+
+    </Grid>
+</Window>
